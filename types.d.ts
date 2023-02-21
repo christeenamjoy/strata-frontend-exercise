@@ -16,3 +16,8 @@ type ProfileData = {
   email: string;
   birthday: string;
 };
+
+type ContextData = {
+  liked: Array
+  setLiked:(c: Array) => void
+}
