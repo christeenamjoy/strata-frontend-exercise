@@ -53,8 +53,14 @@ const User: FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
             </svg>
           </span>
-
-          <img src={`/users/${data?.username}.png`} alt="profile-image" className="h-45 sm:h-80 m-auto"/>
+          <div className="h-45 sm:h-80 m-auto w-fit">
+            <Image
+              src={`/users/${data.username}.png`}
+              alt="profile-image"
+              width={300}
+              height={300}
+            />
+          </div>
 
 
       <div className="flex items-center">

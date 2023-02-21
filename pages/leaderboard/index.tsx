@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FC, useEffect, useState } from "react";
 import { useGlobalContext } from "../../components/utils/context";
@@ -46,7 +47,9 @@ const Leaderboard: FC = () => {
     return (<div className="grid grid-cols-3 sm:grid-cols-4 text-white bg-black p-2 text-sm sm:text-xl ">
     <div className="hidden items-center border-b border-slate-100 dark:border-slate-800 pl-8 text-slate-500 dark:text-slate-400 sm:flex justify-center">{key + 1}</div>
     <div className="flex items-center border-b border-slate-100 dark:border-slate-800 p-2 pl-8">
-      <img alt="" className="h-10 w-10 rounded-full mr-3 sm:mr-5 bg-gray-300" />
+      <div className="h-10 w-10 rounded-full mr-3 sm:mr-5 bg-gray-300">
+      <Image alt="" width={40} height={40} src={""} />
+      </div>
       <div className=" bg-gray-300 w-32 h-2"></div>
     </div>
     <div className="flex items-center border-b border-slate-100 dark:border-slate-800 p-2 pl-8 text-slate-500 dark:text-slate-400 justify-center"><div className=" bg-gray-300 w-16 h-2"></div></div>
@@ -74,7 +77,7 @@ const Leaderboard: FC = () => {
             <div className="grid grid-cols-3 sm:grid-cols-4 text-white bg-black p-2 text-sm sm:text-xl ">
               <div className="hidden items-center border-b border-slate-100 dark:border-slate-800 pl-8 text-slate-500 dark:text-slate-400 sm:flex justify-center">{i + 1}</div>
               <div className="flex items-center border-b border-slate-100 dark:border-slate-800 p-2 pl-8 text-slate-500 dark:text-slate-400 ">
-                <img src={player.profileImage} alt="profile-image" className="h-10 sm:h-20 rounded-full mr-3 sm:mr-5" />
+                <Image src={player.profileImage} alt="profile-image" width={80} height={80} className="h-10 sm:h-20 sm:rounded-full mr-3 sm:mr-5"/>
                 <div>{player.username}</div>
               </div>
               <div className="flex items-center border-b border-slate-100 dark:border-slate-800 p-2 pl-8 text-slate-500 dark:text-slate-400 justify-center">{player.score}</div>
