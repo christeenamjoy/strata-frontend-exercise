@@ -42,10 +42,9 @@ const Leaderboard: FC = () => {
     }
   };
 
-  const Shimmer = (props:{key:number}) =>{
-    const {key} = props
+  const Shimmer = () =>{
     return (<div className="grid grid-cols-3 sm:grid-cols-4 text-white bg-black p-2 text-sm sm:text-xl ">
-    <div className="hidden items-center border-b border-slate-100 dark:border-slate-800 pl-8 text-slate-500 dark:text-slate-400 sm:flex justify-center">{key + 1}</div>
+    <div className="hidden items-center border-b border-slate-100 dark:border-slate-800 pl-8 text-slate-500 dark:text-slate-400 sm:flex justify-center">{0}</div>
     <div className="flex items-center border-b border-slate-100 dark:border-slate-800 p-2 pl-8">
       <div className="h-10 w-10 rounded-full mr-3 sm:mr-5 bg-gray-300">
       <Image alt="" width={40} height={40} src={""} />
