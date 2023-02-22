@@ -73,6 +73,11 @@ const User: FC = () => {
 
   }
 
+  const SubItem = ({label,value}:{label:string,value:string|number}) =>{
+    return  <h1 className="text-xl sm:text-2xl my-2">{label}: {value}</h1>
+
+  }
+
 
   return (<>
 
@@ -110,10 +115,10 @@ const User: FC = () => {
         </span>
         </div>
       <h1 className="text-xl sm:text-2xl my-2">{data?.bio}</h1>
-      <h1 className="text-xl sm:text-2xl my-2">Age: {data?.age}</h1>
-      <h1 className="text-xl sm:text-2xl my-2">Twitter: {data?.twitter}</h1>
-      <h1 className="text-xl sm:text-2xl my-2">Email: {data?.email}</h1>
-      <h1 className="text-xl sm:text-2xl my-2">Dob: {data?.birthday}</h1>
+      <SubItem label="Age" value={data?.age}/>
+      <SubItem label="Twitter" value={data?.twitter}/>
+      <SubItem label="Email" value={data?.email}/>
+      <SubItem label="Dob" value={data?.birthday}/>
 
     </div>): <ProfileShimmer/>}
   </>)
